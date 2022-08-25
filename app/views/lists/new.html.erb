@@ -1,0 +1,13 @@
+<div>
+  <h1>Create a new list</h1>
+</div>
+
+<div>
+  <%= simple_form_for(@list) do |f| %>
+    <%= f.input :name %>
+
+    <%= f.submit %>
+  <% end %>
+</div>
+
+<%= link_to "Back to the movie list", lists_path %>
