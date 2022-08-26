@@ -6,7 +6,7 @@
     <li class="list-group-item"><%= bookmark.comment %> - Comment for the movie:
       <%= bookmark.movie.title %> -
       <%= link_to " Click here to delete this bookmark",
-      list_bookmarks_path,
+      bookmark_path(bookmark),
       data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
     </li>
   <% end %>
@@ -17,7 +17,7 @@
   <h2>Create a new bookmark</h2>
   <%= simple_form_for [@list, @bookmark] do |f| %>
     <%= f.input :comment %>
-    <%= f.input :movie, collection:Movie.all%>
+    <%= f.association :movie %>
     <%= f.button :submit %>
   <% end %>
 </div>

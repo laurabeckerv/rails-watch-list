@@ -71,3 +71,4 @@ end
 
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
+bundle lock --add-platform x86_64-linux
